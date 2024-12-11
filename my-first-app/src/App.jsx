@@ -1,16 +1,16 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import TodoList from "./TodoList";
 import AddTodoForm from "./AddTodoForm";
 
+
 function App() {
-  const [newTodo, setNewTodo] = useState('');
+  const [newTodo, setNewTodo] = useState(''); 
 
   const addTodo = (title) => {
+    setNewTodo(title);
     console.log('New todo:', title);
-    setNewTodo(''); 
-  };
-
-  return (
+   };
+ return (
     <div>
       <h1>Todo List</h1>
       <AddTodoForm addTodo={addTodo} />
@@ -22,3 +22,5 @@ function App() {
 
 export default App;
 
+
+ 
